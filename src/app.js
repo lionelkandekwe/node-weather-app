@@ -5,7 +5,9 @@ const geocode = require("../utilis/geocode")
 const forecast = require("../utilis/forecast")
 
 const express = require('express');
+
 const app = express();
+const port = process.env.PORT || 4000
 
 
 // define path for Express config
@@ -117,7 +119,7 @@ app.get('*', (req, res) => {
     })
 })
 
-const url = 4000
-app.listen(url, (req, res) => {
-    console.log('server has started')
+
+app.listen(port, (req, res) => {
+    console.log('server has started' + port)
 })
